@@ -22,7 +22,6 @@
             <a onclick="addForm()" class="btn btn-primary" >Add Products In</a>
             <a href="{{ route('exportPDF.productMasukAll') }}" class="btn btn-danger">Export PDF</a>
             <a href="{{ route('exportExcel.productMasukAll') }}" class="btn btn-success">Export Excel</a>
-            <a onclick="scan()" class="btn btn-warning" >Scan QR</a>
         </div>
 
 
@@ -75,6 +74,7 @@
 
                 @foreach($invoice_data as $i)
                     <tbody>
+                    <td>{!! QrCode::size(50)->generate(Request::url()); !!}</td>
                     <td>{{ $i->id }}</td>
                     <td>{{ $i->product->nama }}</td>
                     <td>{{ $i->supplier->nama }}</td>
@@ -91,7 +91,6 @@
     </div>
 
     @include('product_masuk.form')
-    @include('product_masuk.scan')
 
 @endsection
 
