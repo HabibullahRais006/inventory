@@ -14,7 +14,6 @@
                 <div class="modal-body">
                     <input type="hidden" id="id" name="id">
 
-
                     <div class="box-body">
                         
                         <div id="reader" width="60px"></div>
