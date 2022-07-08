@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>A simple, clean, and responsive HTML invoice template</title>
+    <title>UD ARDILA TANI</title>
 
 
 </head>
@@ -35,7 +35,7 @@
     </table>
 
 
-    <table border="0" id="table-data" width="80%">
+    <table borders="0" id="table-data" width="80%">
         <tr>
             <td width="70px">Invoice ID</td>
             <td width="">: {{ $product_masuk->id }}</td>
@@ -66,22 +66,22 @@
 
     </table>
 
-    {{--<hr  size="2px" color="black" align="left" width="45%">--}}
+    {{-- <hr  size="2px" color="black" align="left" width="45%"> --}}
 
 
-    <table border="0" width="80%">
+    <table borders="0" width="80%">
         <tr align="right">
             <td>Hormat Kami</td>
         </tr>
     </table>
 
-    <table border="0" width="80%">
+    <table borders="0" width="80%">
         <tr align="right">
             <td><img src="https://upload.wikimedia.org/wikipedia/en/f/f4/Timothy_Spall_Signature.png" width="100px" height="100px"></td>
         </tr>
 
     </table>
-    <table border="0" width="80%">
+    <table borders="0" width="80%">
         <tr align="right">
             <td>Sheptian Bagja Utama</td>
         </tr>

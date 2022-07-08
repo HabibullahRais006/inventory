@@ -189,5 +189,10 @@ class ProductMasukController extends Controller
     public function scanQR()
     {
         return (new ExportProdukMasuk);
-    }    
+    }  
+
+    public function scan()
+    {
+        return view('product_masuk.scan');
+    }  
 }

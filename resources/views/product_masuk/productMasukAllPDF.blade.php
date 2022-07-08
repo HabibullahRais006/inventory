@@ -43,6 +43,7 @@
         <thead>
         <tr>
             <td>ID</td>
+            {{-- <td>Scan Qr</td> --}}
             <td>Product</td>
             <td>Supplier</td>
             <td>Quantity</td>
@@ -53,6 +54,7 @@
             <tbody>
             <tr>
                 <td>{{ $p->id }}</td>
+                {{-- <td>{!! QrCode::size(50)->generate(Request::url()); !!}</td> --}}
                 <td>{{ $p->product->nama }}</td>
                 <td>{{ $p->supplier->nama }}</td>
                 <td>{{ $p->qty }}</td>

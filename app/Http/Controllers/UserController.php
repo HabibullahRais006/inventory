@@ -45,7 +45,7 @@ class UserController extends Controller {
 			'email' => 'required|unique:suppliers',
 		]);
 
-		User::create($request->all());
+		admin::create($request->all());
 
 		return response()->json([
 			'success' => true,

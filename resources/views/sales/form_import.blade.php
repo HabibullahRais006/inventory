@@ -1,4 +1,4 @@
-<div class="row">
+{{-- <div class="row">
     <!-- left column -->
     <div class="col-md-6">
         <!-- general form elements -->
@@ -57,4 +57,4 @@
         <!-- /.box -->
     </div>
 
-</div>
+</div> --}}

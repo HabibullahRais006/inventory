@@ -39,7 +39,7 @@
         <!-- Logo -->
         <a href="index2.html" class="logo">
             <!-- mini logo for sidebar mini 50x50 pixels -->
-            <span class="logo-mini"><b>A</b>LT</span>
+            <span class="logo-mini"><b>A</b>T</span>
             <!-- logo for regular state and mobile devices -->
             <span class="logo-lg"><b>UD.</b>ARDILA TANI</span>
         </a>
@@ -75,9 +75,9 @@
                             </li>
                             <!-- Menu Footer-->
                             <li class="user-footer">
-                                {{--<div class="pull-left">--}}
-                                {{--<a href="#" class="btn btn-default btn-flat">Profile</a>--}}
-                                {{--</div>--}}
+                                <div class="pull-left">
+                                {{-- <a href="#" class="btn btn-default btn-flat">Profile</a> --}}
+                                </div>
                                 <div class="pull-right">
                                     <a class="btn btn-default btn-flat" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
@@ -113,17 +113,7 @@
         <!-- /.content -->
     </div>
     <!-- /.content-wrapper -->
-
-    <!-- Main Footer -->
-    <footer class="main-footer">
-        <!-- To the right -->
-        <div class="pull-right hidden-xs">
-            Anything you want
-        </div>
-        <!-- Default to the left -->
-        <?php $date = date('Y')?>
-        <strong>Copyright &copy; {{$date}} <a href="#">Revan</a>.</strong> All rights reserved.
-    </footer>
+        
 
     <!-- Control Sidebar -->
 

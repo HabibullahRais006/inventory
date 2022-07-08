@@ -29,7 +29,7 @@
             <table id="products-out-table" class="table table-striped">
                 <thead>
                 <tr>
-                    <th>ID</th>
+                    <th>No</th>
                     <th>Products</th>
                     <th>Customer</th>
                     <th>QTY</th>
@@ -62,7 +62,8 @@
             <table id="invoice" class="table table-striped">
                 <thead>
                 <tr>
-                    <th>ID</th>
+                    <th>No</th>
+                    <th>QR</th>
                     <th>Products</th>
                     <th>Customer</th>
                     <th>QTY</th>
@@ -74,6 +75,7 @@
                 @foreach($invoice_data as $i)
                     <tbody>
                         <td>{{ $i->id }}</td>
+                        <td>{!! QrCode::size(50)->generate(Request::url()); !!}</td>
                         <td>{{ $i->product->nama }}</td>
                         <td>{{ $i->customer->nama }}</td>
                         <td>{{ $i->qty }}</td>

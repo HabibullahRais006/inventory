@@ -22,7 +22,7 @@
             <a onclick="addForm()" class="btn btn-primary" >Add Products In</a>
             <a href="{{ route('exportPDF.productMasukAll') }}" class="btn btn-danger">Export PDF</a>
             <a href="{{ route('exportExcel.productMasukAll') }}" class="btn btn-success">Export Excel</a>
-            <a onclick="scan()" class="btn btn-warning" >Scan QR</a>
+            <a href="{{ route('scan') }}" class="btn btn-info">Scan</a>
         </div>
 
 
@@ -33,7 +33,7 @@
             <table id="products-in-table" class="table table-striped">
                 <thead>
                 <tr>
-                    <th>ID</th>
+                    <th>No</th>
                     <th>Products</th>
                     <th>Supplier</th>
                     <th>QTY</th>
@@ -44,7 +44,6 @@
                 <tbody></tbody>
             </table>
         </div>
-        <!-- /.box-body -->
     </div>
 
     <div class="box col-md-6">
@@ -64,7 +63,8 @@
             <table id="invoice" class="table table-striped">
                 <thead>
                 <tr>
-                    <th>ID</th>
+                    <th>No</th>
+                    <th>Qr</th>
                     <th>Products</th>
                     <th>Supplier</th>
                     <th>QTY</th>
@@ -76,6 +76,7 @@
                 @foreach($invoice_data as $i)
                     <tbody>
                     <td>{{ $i->id }}</td>
+                    <td>{!! QrCode::size(50)->generate(Request::url()); !!}</td>
                     <td>{{ $i->product->nama }}</td>
                     <td>{{ $i->supplier->nama }}</td>
                     <td>{{ $i->qty }}</td>
@@ -91,7 +92,6 @@
     </div>
 
     @include('product_masuk.form')
-    @include('product_masuk.scan')
 
 @endsection
 
