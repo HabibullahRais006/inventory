@@ -15,11 +15,11 @@
     <div class="box">
 
         <div class="box-header">
-            <h3 class="box-title">Data Products Out</h3>
+            <h3 class="box-title">Data Transaksi</h3>
         </div>
 
         <div class="box-header">
-            <a onclick="addForm()" class="btn btn-primary" >Add Products Out</a>
+            <a onclick="addForm()" class="btn btn-primary" >Add Transaksi</a>
             <a href="{{ route('exportPDF.productKeluarAll') }}" class="btn btn-danger">Export PDF</a>
             <a href="{{ route('exportExcel.productKeluarAll') }}" class="btn btn-success">Export Excel</a>
         </div>
@@ -31,7 +31,7 @@
                 <tr>
                     <th>No</th>
                     <th>Products</th>
-                    <th>Customer</th>
+                    {{-- <th>Customer</th> --}}
                     <th>QTY</th>
                     <th>Tanggal Pembelian</th>
                     <th></th>
@@ -65,7 +65,7 @@
                     <th>No</th>
                     <th>QR</th>
                     <th>Products</th>
-                    <th>Customer</th>
+                    {{-- <th>Customer</th> --}}
                     <th>QTY</th>
                     <th>Tanggal Pembelian</th>
                     <th>Export Invoice</th>
@@ -77,7 +77,7 @@
                         <td>{{ $i->id }}</td>
                         <td>{!! QrCode::size(50)->generate(Request::url()); !!}</td>
                         <td>{{ $i->product->nama }}</td>
-                        <td>{{ $i->customer->nama }}</td>
+                        {{-- <td>{{ $i->customer->nama }}</td> --}}
                         <td>{{ $i->qty }}</td>
                         <td>{{ $i->tanggal }}</td>
                         <td>
@@ -162,7 +162,7 @@
             columns: [
                 {data: 'id', name: 'id'},
                 {data: 'products_name', name: 'products_name'},
-                {data: 'customer_name', name: 'customer_name'},
+                // {data: 'customer_name', name: 'customer_name'},
                 {data: 'qty', name: 'qty'},
                 {data: 'tanggal', name: 'tanggal'},
                 {data: 'action', name: 'action', orderable: false, searchable: false}
@@ -191,7 +191,7 @@
 
                     $('#id').val(data.id);
                     $('#product_id').val(data.product_id);
-                    $('#customer_id').val(data.customer_id);
+                    // $('#customer_id').val(data.customer_id);
                     $('#qty').val(data.qty);
                     $('#tanggal').val(data.tanggal);
                 },

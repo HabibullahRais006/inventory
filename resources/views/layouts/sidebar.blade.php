@@ -38,7 +38,7 @@
             {{-- <li class="active"><a href="{{ route('customers.index') }}"><i class="fa fa-users"></i> <span>Customer</span></a></li> --}}
             <li class="active"><a href="{{ route('sales.index') }}"><i class="fa fa-cart-plus"></i> <span>Sales</span></a></li>
             {{-- <li class="active"><a href="{{ route('suppliers.index') }}"><i class="fa fa-truck"></i> <span>Supplier</span></a></li> --}}
-            <li class="active"><a href="{{ route('productsOut.index') }}"><i class="fa fa-minus"></i> <span>Product Keluar</span></a></li>
+            <li class="active"><a href="{{ route('productsOut.index') }}"><i class="fa fa-minus"></i> <span>Transaksi</span></a></li>
 
             <li class="active"><a href="{{ route('productsIn.index') }}"><i class="fa fa-plus"></i> <span>Product Masuk</span></a></li>
 
