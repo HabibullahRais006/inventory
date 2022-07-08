@@ -35,7 +35,7 @@
                 <tr>
                     <th>No</th>
                     <th>Products</th>
-                    <th>Supplier</th>
+                    {{-- <th>Supplier</th> --}}
                     <th>QTY</th>
                     <th>Tanggal Masuk</th>
                     <th></th>
@@ -66,7 +66,7 @@
                     <th>No</th>
                     <th>Qr</th>
                     <th>Products</th>
-                    <th>Supplier</th>
+                    {{-- <th>Supplier</th> --}}
                     <th>QTY</th>
                     <th>Tanggal Pembelian</th>
                     <th>Export Invoice</th>
@@ -78,7 +78,7 @@
                     <td>{{ $i->id }}</td>
                     <td>{!! QrCode::size(50)->generate(Request::url()); !!}</td>
                     <td>{{ $i->product->nama }}</td>
-                    <td>{{ $i->supplier->nama }}</td>
+                    {{-- <td>{{ $i->supplier->nama }}</td> --}}
                     <td>{{ $i->qty }}</td>
                     <td>{{ $i->tanggal }}</td>
                     <td>
@@ -161,7 +161,7 @@
             columns: [
                 {data: 'id', name: 'id'},
                 {data: 'products_name', name: 'products_name'},
-                {data: 'supplier_name', name: 'supplier_name'},
+                // {data: 'supplier_name', name: 'supplier_name'},
                 {data: 'qty', name: 'qty'},
                 {data: 'tanggal', name: 'tanggal'},
                 {data: 'action', name: 'action', orderable: false, searchable: false}
@@ -200,7 +200,7 @@
 
                     $('#id').val(data.id);
                     $('#product_id').val(data.product_id);
-                    $('#supplier_id').val(data.supplier_id);
+                    // $('#supplier_id').val(data.supplier_id);
                     $('#qty').val(data.qty);
                     $('#tanggal').val(data.tanggal);
                 },
