@@ -22,11 +22,11 @@
                             <span class="help-block with-errors"></span>
                         </div>
 
-                        {{-- <div class="form-group">
+                        <div class="hidden">
                             <label >Customer</label>
-                            {!! Form::select('customer_id', $customers, null, ['class' => 'form-control select', 'placeholder' => '-- Choose Customer --', 'id' => 'customer_id', 'required']) !!}
+                            <input type="text" class="form-control" id="customer_id" name="customer_id" required value="1">
                             <span class="help-block with-errors"></span>
-                        </div> --}}
+                        </div>
 
                         <div class="form-group">
                             <label >Quantity</label>

@@ -64,6 +64,7 @@
     {{--</script>--}}
 
     <script type="text/javascript">
+        let no = 1;
         var table = $('#products-table').DataTable({
             processing: true,
             serverSide: true,

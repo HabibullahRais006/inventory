@@ -22,9 +22,9 @@
                             <span class="help-block with-errors"></span>
                         </div>
 
-                        <div class="form-group">
+                        <div class="hidden">
                             <label >Supplier</label>
-                            {!! Form::select('supplier_id', $suppliers, null, ['class' => 'form-control select', 'placeholder' => '-- Choose Supplier --', 'id' => 'supplier_id', 'required']) !!}
+                            <input type="text" class="form-control" id="supplier_id" name="supplier_id" required value="1">
                             <span class="help-block with-errors"></span>
                         </div>
 

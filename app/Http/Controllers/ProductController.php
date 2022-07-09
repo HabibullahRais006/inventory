@@ -168,7 +168,19 @@ class ProductController extends Controller
     public function apiProducts(){
         $product = Product::all();
 
+        function str($angka){
+            $harga = "Rp " . number_format($angka,2,',','.');
+            return $harga;
+        }
+        // function str($no){
+        //     $d =1;
+        //     $id= $d++;
+        //     return $id;
+        // }
         return Datatables::of($product)
+            ->addColumn('harga', function ($product){
+                return str($product->harga);
+            })
             ->addColumn('category_name', function ($product){
                 return $product->category->name;
             })

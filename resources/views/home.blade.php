@@ -49,8 +49,8 @@
             <a href="{{ route('products.index') }}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
         </div>
     </div>
-    <!-- ./col -->
-    {{-- <div class="col-lg-3 col-xs-6">
+ 
+    <div class="col-lg-3 col-xs-6">
         <!-- small box -->
         <div class="small-box bg-red">
             <div class="inner">
@@ -63,8 +63,8 @@
             </div>
             <a href="{{ route('customers.index') }}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
         </div>
-    </div> --}}
-    <!-- ./col -->
+    </div>
+   
 </div>
 
 

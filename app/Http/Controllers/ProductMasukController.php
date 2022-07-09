@@ -62,17 +62,17 @@ class ProductMasukController extends Controller
             'tanggal'        => 'required'
         ]);
 
+        $jumlah = $request->qty;
+        $product = Product::find(['product_id'=>$request->product_id]);
+        foreach($product as $row){
+        $total = $row->qty + $jumlah;
+        $row->update(['qty'=>$total]);
         Product_Masuk::create($request->all());
-
-        $product = Product::findOrFail($request->product_id);
-        $product->qty += $request->qty;
-        $product->save();
-
         return response()->json([
             'success'    => true,
             'message'    => 'Products In Created'
         ]);
-
+        }
     }
 
     /**
